@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color guessing</title>
+    <link rel="stylesheet" href="color.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="container">
+        <div id="rulesScreen">
+          <div class="start">
+            <h2 class="app-header">Color Guessing Game</h2>
+            <p>Rules of the Game</p>
+            <p data-testid="gameInstructions">
+              You are to pick color from similar options, if correct, you
+              <strong>score</strong> a point!
+            </p>
+            <p data-testid="gameInstructions">
+              you have got <strong>2</strong>mins to play, the game ends when
+              the timer runs out
+            </p>
+            <p data-testid="gameInstructions">
+              If your loss is greater than <strong>7</strong> ,the game ends
+            </p>
+            <button onclick="startGame()" class="btn btn-ui">Start Game</button>
+          </div>
+        </div>
+
+        <div id="gameScreen" class="screen hidden">
+          <div class="options">
+            <!--  -->
+            <div class="score-display">
+              <p class="points" data-testid="score">
+                Wins : <span id="score">0</span> | Losses:
+                <span id="losses">0</span>
+              </p>
+              <p class="highscore">Highscore : <span id="highscore">0</span></p>
+            </div>
+            <h4>Guess the Color!</h4>
+            <!--  -->
+            <!--  -->
+            <div
+              id="colorDisplay"
+              class="color-display"
+              data-testid="colorBox"
+            ></div>
+            <!--  -->
+            <p id="message" data-testid="gameStatus"></p>
+
+            <div
+              class="color-option"
+              id="options"
+              data-testid="colorOption"
+            ></div>
+            <!--  -->
+            <button class="btn btn-ui reset-btn" onclick="resetGame()">
+              Reset Game
+            </button>
+
+            <p class="timer">Time left: <span id="timer">30</span> seconds</p>
+          </div>
+        </div>
+
+        <div id="gameOverScreen" class="result hidden">
+          <h2>Game Over!</h2>
+          <div class="scores">
+            <p>Your Score: <span id="finalScore"></span></p>
+            <p>Highscore: <span id="finalHighscore"></span></p>
+          </div>
+          <button
+            onclick="startGame()"
+            class="btn btn-ui"
+            data-testid="newGameButton"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

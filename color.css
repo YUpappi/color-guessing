@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+  --color-theme: #0c2d0c;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-light);
+  background-color: var(--color-darkest);
+  padding: 3.2rem;
+}
+
+.container {
+  max-width: 150rem;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app-header {
+  width: 100%;
+  /* max-width: 55rem; */
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.start p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s ease-in;
+  outline: none;
+}
+
+.btn-ui {
+  float: right;
+}
+h4 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.color-display {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.color-option {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.color-option button {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+.options {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-light);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.result span {
+  font-size: 2.2rem;
+}
+.scores {
+  display: flex;
+  justify-content: space-around;
+}
+
+#message {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-block: 8px;
+}
+.highscore,
+.points {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+  font-weight: 700;
+}
+
+.timer {
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+  border: 2px solid var(--color-dark);
+  padding: 1.35rem 2.8rem;
+  border-radius: 100px;
+  transition: 0.3s ease-in;
+}
+.score-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 50%;
+  }
+
+  .color-option button,
+  .color-display {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .color-option button,
+  .color-display {
+    width: 100px;
+    height: 100px;
+  }
+
+  .reset-btn {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+  }
+
+  .timer {
+    padding: 1.35rem 2.2rem;
+  }
+}
